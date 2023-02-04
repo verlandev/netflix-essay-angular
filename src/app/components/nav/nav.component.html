@@ -1,0 +1,26 @@
+<nav class="nav">
+  <div class="navbar">
+    <a class="navbar__a" href="#"
+      ><img class="navbar__img" src="{{ image }}" alt="navbarLogo"
+    /></a>
+    <div class="navLeft">
+      <ul class="navLeft__ul">
+        <li class="navLeft__li" *ngFor="let item of navbarLeft">
+          <a href="#" class="{{ item.class }}">{{ item.text }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="navRight">
+    <ul class="navRight__ul">
+      <li class="navRight__li" *ngFor="let item of navbarRight">
+        <a href="#" class="{{ item.class }}" *ngIf="item.text">{{
+          item.text
+        }}</a>
+        <a href="#" class="{{ item.class }}" *ngIf="item.icon"
+          ><img class="{{ item.class }}" src="{{ item.icon }}"
+        /></a>
+      </li>
+    </ul>
+  </div>
+</nav>
